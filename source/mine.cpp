@@ -12,6 +12,7 @@ int main()
     system("clear");
     signal(SIGINT, catch_int);
     signal(SIGTSTP, catch_int);
+    signal(SIGQUIT, catch_int); // [ctrl + \]
     setGameMode();
     getQuickClearSettings();
     int timer = 0;
